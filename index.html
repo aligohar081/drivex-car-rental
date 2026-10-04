@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveX — Premium Car Rental in Pakistan</title>
+    <meta name="description" content="Rent reliable cars across Pakistan with DriveX. Browse our fleet, compare prices, and book your perfect vehicle online.">
+    <meta name="keywords" content="car rental Pakistan, rent a car Lahore, rent a car Islamabad, rent a car Karachi, SUV rental, luxury car rental, DriveX">
+    <meta name="author" content="DriveX">
+    <meta name="theme-color" content="#0B0F14">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DriveX — Premium Car Rental in Pakistan">
+    <meta property="og:description" content="Rent reliable cars across Pakistan with DriveX. Browse our fleet, compare prices, and book your perfect vehicle online.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=1200&q=80&auto=format&fit=crop">
+    <meta property="og:site_name" content="DriveX">
+    <meta property="og:locale" content="en_PK">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============ HEADER / NAVIGATION ============ -->
+    <header class="site-header" id="siteHeader">
+        <nav class="nav container" aria-label="Primary">
+            <a href="#home" class="logo" aria-label="DriveX home">
+                <span class="logo-mark" aria-hidden="true"><i class="fa-solid fa-road"></i></span>
+                <span class="logo-text">Drive<span>X</span></span>
+            </a>
+
+            <ul class="nav-links" role="list">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#cars" class="nav-link">Cars</a></li>
+                <li><a href="#how" class="nav-link">How It Works</a></li>
+                <li><a href="#locations" class="nav-link">Locations</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+                <button class="icon-btn has-dot" id="myBookingBtn" type="button" aria-label="My booking">
+                    <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
+                    <span class="dot" id="bookingDot" hidden></span>
+                </button>
+                <button class="btn btn-ghost nav-signin" id="signInBtn" type="button">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <span id="signInLabel">Sign In</span>
+                </button>
+                <a href="#search" class="btn btn-accent nav-cta">Book a Car</a>
+                <button class="icon-btn hamburger" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile drawer -->
+    <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+    <aside class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation" aria-hidden="true">
+        <div class="mobile-menu-head">
+            <span class="logo-text">Drive<span>X</span></span>
+            <button class="icon-btn" id="menuClose" type="button" aria-label="Close menu">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+        <ul class="mobile-links" role="list">
+            <li><a href="#home" class="mobile-link">Home <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+            <li><a href="#cars" class="mobile-link">Cars <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+            <li><a href="#how" class="mobile-link">How It Works <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+            <li><a href="#locations" class="mobile-link">Locations <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+            <li><a href="#about" class="mobile-link">About <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+            <li><a href="#contact" class="mobile-link">Contact <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+        </ul>
+        <div class="mobile-menu-foot">
+            <button class="btn btn-outline btn-block" type="button" data-open-booking-view>
+                <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> My Booking
+            </button>
+            <button class="btn btn-outline btn-block" type="button" data-open-signin>
+                <i class="fa-regular fa-user" aria-hidden="true"></i> <span class="signin-mobile-label">Sign In</span>
+            </button>
+            <a href="#search" class="btn btn-accent btn-block mobile-link">Book a Car</a>
+        </div>
+    </aside>
+
+    <main id="main">
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="home" aria-labelledby="heroTitle">
+            <div class="hero-media" aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?w=1920&q=80&auto=format&fit=crop" alt="" fetchpriority="high">
+            </div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow eyebrow-light"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Fully insured · Verified fleet</span>
+                    <h1 id="heroTitle">Find the Perfect Car for Your <span class="text-accent">Journey</span></h1>
+                    <p class="hero-sub">Premium vehicles, flexible rentals, and transparent pricing — all in one place.</p>
+                    <ul class="hero-trust" role="list">
+                        <li><i class="fa-solid fa-star" aria-hidden="true"></i> 4.9/5 from 15K+ renters</li>
+                        <li><i class="fa-solid fa-clock" aria-hidden="true"></i> 24/7 roadside support</li>
+                        <li><i class="fa-solid fa-tag" aria-hidden="true"></i> No hidden charges</li>
+                    </ul>
+                </div>
+
+                <!-- Search widget -->
+                <form class="search-card" id="search" novalidate aria-label="Search available cars">
+                    <div class="search-field">
+                        <label for="searchLocation"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Pick-up Location</label>
+                        <select id="searchLocation" name="location">
+                            <option value="Lahore">Lahore</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Rawalpindi">Rawalpindi</option>
+                            <option value="Peshawar">Peshawar</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label for="searchPickup"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Pick-up Date</label>
+                        <input type="date" id="searchPickup" name="pickup" required aria-describedby="searchError">
+                    </div>
+                    <div class="search-field">
+                        <label for="searchReturn"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Return Date</label>
+                        <input type="date" id="searchReturn" name="return" required aria-describedby="searchError">
+                    </div>
+                    <div class="search-field">
+                        <label for="searchType"><i class="fa-solid fa-car-side" aria-hidden="true"></i> Car Type</label>
+                        <select id="searchType" name="type">
+                            <option value="All">All Cars</option>
+                            <option value="Economy">Economy</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="SUV">SUV</option>
+                            <option value="Luxury">Luxury</option>
+                            <option value="Van">Van</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-accent btn-lg search-submit">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Search Cars
+                    </button>
+                    <p class="search-error" id="searchError" role="alert"></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- ============ FLEET ============ -->
+        <section class="section fleet" id="cars" aria-labelledby="fleetTitle">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Our Fleet</span>
+                    <h2 id="fleetTitle">Our Premium Fleet</h2>
+                    <p>Choose from our wide range of reliable and comfortable vehicles.</p>
+                </div>
+
+                <div class="fleet-layout">
+                    <!-- Filters -->
+                    <aside class="filters" id="filtersPanel" aria-label="Filter cars">
+                        <div class="filters-head">
+                            <h3><i class="fa-solid fa-sliders" aria-hidden="true"></i> Filters</h3>
+                            <button type="button" class="link-btn" id="resetFilters">Reset all</button>
+                            <button type="button" class="icon-btn filters-close" id="filtersClose" aria-label="Close filters">
+                                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <fieldset class="filter-group">
+                            <legend>Vehicle Type</legend>
+                            <div class="pill-group" data-filter="type">
+                                <button type="button" class="pill active" data-value="All" aria-pressed="true">All</button>
+                                <button type="button" class="pill" data-value="Economy" aria-pressed="false">Economy</button>
+                                <button type="button" class="pill" data-value="Sedan" aria-pressed="false">Sedan</button>
+                                <button type="button" class="pill" data-value="SUV" aria-pressed="false">SUV</button>
+                                <button type="button" class="pill" data-value="Luxury" aria-pressed="false">Luxury</button>
+                                <button type="button" class="pill" data-value="Van" aria-pressed="false">Van</button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="filter-group">
+                            <legend>Transmission</legend>
+                            <div class="pill-group" data-filter="transmission">
+                                <button type="button" class="pill active" data-value="All" aria-pressed="true">All</button>
+                                <button type="button" class="pill" data-value="Automatic" aria-pressed="false">Automatic</button>
+                                <button type="button" class="pill" data-value="Manual" aria-pressed="false">Manual</button>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="filter-group">
+                            <legend>Fuel</legend>
+                            <div class="pill-group" data-filter="fuel">
+                                <button type="button" class="pill active" data-value="All" aria-pressed="true">All</button>
+                                <button type="button" class="pill" data-value="Petrol" aria-pressed="false">Petrol</button>
+                                <button type="button" class="pill" data-value="Diesel" aria-pressed="false">Diesel</button>
+                                <button type="button" class="pill" data-value="Hybrid" aria-pressed="false">Hybrid</button>
+                            </div>
+                        </fieldset>
+
+                        <div class="filter-group">
+                            <label class="legend" for="priceRange">Max Price / Day</label>
+                            <input type="range" id="priceRange" min="5000" max="35000" step="500" value="35000" aria-describedby="priceOutput">
+                            <output id="priceOutput" for="priceRange" class="range-output">PKR 5,000 — PKR 35,000</output>
+                        </div>
+
+                        <div class="filter-group">
+                            <button type="button" class="favorites-toggle" id="favoritesToggle" aria-pressed="false">
+                                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                <span>Show favorites only</span>
+                                <span class="fav-count" id="favCount">0</span>
+                            </button>
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn-block filters-apply" id="filtersApply">Show results</button>
+                    </aside>
+
+                    <!-- Results -->
+                    <div class="results">
+                        <div class="results-bar">
+                            <div class="results-heading">
+                                <h3 id="resultsTitle">Available Cars</h3>
+                                <p id="resultsCount" aria-live="polite">Loading vehicles…</p>
+                            </div>
+                            <div class="results-tools">
+                                <button type="button" class="btn btn-outline filters-open" id="filtersOpen" aria-controls="filtersPanel">
+                                    <i class="fa-solid fa-filter" aria-hidden="true"></i> Filters
+                                </button>
+                                <label class="sr-only" for="sortSelect">Sort cars</label>
+                                <div class="select-wrap">
+                                    <i class="fa-solid fa-arrow-down-wide-short" aria-hidden="true"></i>
+                                    <select id="sortSelect">
+                                        <option value="recommended">Recommended</option>
+                                        <option value="price-asc">Price: Low to High</option>
+                                        <option value="price-desc">Price: High to Low</option>
+                                        <option value="rating">Highest Rated</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chips" id="activeChips" aria-label="Active filters"></div>
+
+                        <div class="car-grid" id="carGrid"></div>
+
+                        <div class="empty-state" id="emptyState" hidden>
+                            <div class="empty-icon"><i class="fa-solid fa-car-burst" aria-hidden="true"></i></div>
+                            <h3>No vehicles found.</h3>
+                            <p>Try changing your filters or rental dates.</p>
+                            <button type="button" class="btn btn-primary" id="emptyReset">Clear all filters</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HOW IT WORKS ============ -->
+        <section class="section how" id="how" aria-labelledby="howTitle">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Simple Process</span>
+                    <h2 id="howTitle">How It Works</h2>
+                    <p>Three easy steps between you and the open road.</p>
+                </div>
+                <ol class="steps" role="list">
+                    <li class="step reveal">
+                        <span class="step-num">01</span>
+                        <div class="step-icon"><i class="fa-solid fa-car" aria-hidden="true"></i></div>
+                        <h3>Choose Your Car</h3>
+                        <p>Browse our premium fleet and select the vehicle that suits your journey.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">02</span>
+                        <div class="step-icon"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i></div>
+                        <h3>Book Online</h3>
+                        <p>Choose your dates, location, and provide your details.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">03</span>
+                        <div class="step-icon"><i class="fa-solid fa-key" aria-hidden="true"></i></div>
+                        <h3>Pick Up &amp; Drive</h3>
+                        <p>Collect your car and enjoy your journey.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ============ WHY CHOOSE ============ -->
+        <section class="section why" id="about" aria-labelledby="whyTitle">
+            <div class="container why-layout">
+                <div class="why-intro reveal">
+                    <span class="eyebrow">Why DriveX</span>
+                    <h2 id="whyTitle">Why Choose DriveX</h2>
+                    <p>Since 2016, DriveX has helped thousands of families, professionals and travellers move across Pakistan with confidence. Every rental comes with clear pricing, comprehensive insurance and a team that picks up the phone.</p>
+                    <a href="#how" class="btn btn-tertiary">Learn More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature reveal">
+                        <i class="fa-solid fa-car-side" aria-hidden="true"></i>
+                        <h3>Wide Selection</h3>
+                        <p>Choose from economy cars to premium SUVs.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <i class="fa-solid fa-receipt" aria-hidden="true"></i>
+                        <h3>Transparent Pricing</h3>
+                        <p>No hidden charges.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>
+                        <h3>Flexible Rentals</h3>
+                        <p>Daily, weekly and long-term rental options.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                        <h3>24/7 Support</h3>
+                        <p>We're here whenever you need us.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                        <h3>Well-Maintained Cars</h3>
+                        <p>Reliable vehicles inspected regularly.</p>
+                    </article>
+                    <article class="feature reveal">
+                        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                        <h3>Easy Booking</h3>
+                        <p>Reserve your vehicle in minutes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ STATS ============ -->
+        <section class="stats" aria-label="DriveX in numbers">
+            <div class="container stats-grid">
+                <div class="stat">
+                    <span class="stat-num" data-target="10" data-suffix="+">0</span>
+                    <span class="stat-label">Locations</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-target="250" data-suffix="+">0</span>
+                    <span class="stat-label">Vehicles</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-target="15" data-suffix="K+">0</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num" data-target="4.9" data-decimals="1" data-suffix="/5">0</span>
+                    <span class="stat-label">Average Rating</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ LOCATIONS ============ -->
+        <section class="section locations" id="locations" aria-labelledby="locTitle">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Nationwide</span>
+                    <h2 id="locTitle">Our Locations</h2>
+                    <p>Pick up and drop off at convenient branches across Pakistan's major cities.</p>
+                </div>
+                <div class="location-grid" id="locationGrid"></div>
+            </div>
+        </section>
+
+        <!-- ============ TESTIMONIALS ============ -->
+        <section class="section testimonials" aria-labelledby="testiTitle">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">Testimonials</span>
+                    <h2 id="testiTitle">What Our Customers Say</h2>
+                    <p>Real experiences from renters across the country.</p>
+                </div>
+                <div class="testi-grid">
+                    <article class="testi reveal">
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote>"Excellent service and a very smooth booking experience. The Corolla was clean and perfectly maintained."</blockquote>
+                        <footer class="testi-author">
+                            <span class="avatar" aria-hidden="true">AK</span>
+                            <span><strong>Ahmed Khan</strong><small>Lahore</small></span>
+                        </footer>
+                    </article>
+                    <article class="testi reveal">
+                        <div class="stars" aria-label="5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <blockquote>"Booked a Fortuner for a family trip to the Northern Areas. Transparent pricing and the airport pickup was right on time."</blockquote>
+                        <footer class="testi-author">
+                            <span class="avatar" aria-hidden="true">SR</span>
+                            <span><strong>Sana Riaz</strong><small>Islamabad</small></span>
+                        </footer>
+                    </article>
+                    <article class="testi reveal">
+                        <div class="stars" aria-label="4.5 out of 5 stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <blockquote>"I rent from DriveX every month for business meetings. Their support team is quick and the cars always feel brand new."</blockquote>
+                        <footer class="testi-author">
+                            <span class="avatar" aria-hidden="true">UM</span>
+                            <span><strong>Usman Malik</strong><small>Karachi</small></span>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section class="section faq" id="faq" aria-labelledby="faqTitle">
+            <div class="container faq-layout">
+                <div class="faq-intro reveal">
+                    <span class="eyebrow">FAQ</span>
+                    <h2 id="faqTitle">Frequently Asked Questions</h2>
+                    <p>Can't find what you're looking for? Call us at <a href="tel:+923001234567">+92 300 1234567</a> — we're available around the clock.</p>
+                </div>
+                <div class="accordion" id="faqList">
+                    <div class="acc-item">
+                        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq1" id="faq1-btn">What documents are required to rent a car?<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
+                        <div class="acc-panel" id="faq1" role="region" aria-labelledby="faq1-btn"><div class="acc-body"><p>You'll need your original CNIC (or passport for foreign nationals), a valid driving licence and a recent utility bill for address verification. Corporate clients may also provide a company letter.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq2" id="faq2-btn">Can I cancel my booking?<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
+                        <div class="acc-panel" id="faq2" role="region" aria-labelledby="faq2-btn"><div class="acc-body"><p>Yes. Cancellations made 24 hours or more before pick-up are free of charge. Later cancellations incur a fee equal to one day's rental.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq3" id="faq3-btn">Is a security deposit required?<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
+                        <div class="acc-panel" id="faq3" role="region" aria-labelledby="faq3-btn"><div class="acc-body"><p>Yes, a refundable security deposit is collected at pick-up. The amount depends on the vehicle category and is returned in full within 3 working days after the car is returned in good condition.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq4" id="faq4-btn">Can I rent a car for multiple days?<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
+                        <div class="acc-panel" id="faq4" role="region" aria-labelledby="faq4-btn"><div class="acc-body"><p>Absolutely. We offer daily, weekly and monthly rentals. Longer rentals automatically qualify for discounted rates — contact our team for a custom quote.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq5" id="faq5-btn">Can someone else drive the rental car?<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
+                        <div class="acc-panel" id="faq5" role="region" aria-labelledby="faq5-btn"><div class="acc-body"><p>Additional drivers are welcome as long as they are registered on the booking at pick-up and provide a valid licence and CNIC.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq6" id="faq6-btn">Do you offer airport pickup?<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
+                        <div class="acc-panel" id="faq6" role="region" aria-labelledby="faq6-btn"><div class="acc-body"><p>Yes. We deliver to Allama Iqbal (Lahore), Islamabad International and Jinnah International (Karachi) airports. Mention your flight details in the special request field.</p></div></div>
+                    </div>
+                    <div class="acc-item">
+                        <h3><button type="button" class="acc-trigger" aria-expanded="false" aria-controls="faq7" id="faq7-btn">Are the cars insured?<i class="fa-solid fa-plus" aria-hidden="true"></i></button></h3>
+                        <div class="acc-panel" id="faq7" role="region" aria-labelledby="faq7-btn"><div class="acc-body"><p>Every DriveX vehicle carries comprehensive insurance and is tracked for your safety. Accidental damage beyond the deposit is covered as per our rental terms.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="cta" aria-labelledby="ctaTitle">
+            <div class="container">
+                <div class="cta-card reveal">
+                    <div class="cta-copy">
+                        <h2 id="ctaTitle">Ready to Hit the Road?</h2>
+                        <p>Book your perfect car today and enjoy the freedom to travel your way.</p>
+                    </div>
+                    <a href="#cars" class="btn btn-accent btn-lg">Browse Cars <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="logo" aria-label="DriveX home">
+                    <span class="logo-mark" aria-hidden="true"><i class="fa-solid fa-road"></i></span>
+                    <span class="logo-text">Drive<span>X</span></span>
+                </a>
+                <p>Your journey. Your car. Your freedom.</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="DriveX on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="DriveX on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.x.com" target="_blank" rel="noopener" aria-label="DriveX on X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="DriveX on LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <nav aria-label="Company">
+                <h3>Company</h3>
+                <ul role="list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#cars">Cars</a></li>
+                    <li><a href="#locations">Locations</a></li>
+                    <li><button type="button" class="footer-link" data-info="careers">Careers</button></li>
+                </ul>
+            </nav>
+            <nav aria-label="Support">
+                <h3>Support</h3>
+                <ul role="list">
+                    <li><a href="tel:+923001234567">Contact</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><button type="button" class="footer-link" data-info="terms">Terms</button></li>
+                    <li><button type="button" class="footer-link" data-info="privacy">Privacy</button></li>
+                </ul>
+            </nav>
+            <div>
+                <h3>Contact</h3>
+                <ul class="contact-list" role="list">
+                    <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Lahore, Pakistan</li>
+                    <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+923001234567">+92 300 1234567</a></li>
+                    <li><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:support@drivex.pk">support@drivex.pk</a></li>
+                    <li><i class="fa-regular fa-clock" aria-hidden="true"></i> Open 24/7</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span id="year">2026</span> DriveX. All rights reserved.</p>
+            <p>Made for travellers across Pakistan.</p>
+        </div>
+    </footer>
+
+    <!-- ============ MODAL: CAR DETAILS ============ -->
+    <div class="modal" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="detailsTitle" hidden>
+        <div class="modal-dialog modal-lg">
+            <button type="button" class="modal-close" data-close aria-label="Close details"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <div class="details" id="detailsContent"></div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL: BOOKING ============ -->
+    <div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="bookingTitle" hidden>
+        <div class="modal-dialog modal-xl">
+            <button type="button" class="modal-close" data-close aria-label="Close booking"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+
+            <div class="booking-view" id="bookingFormView">
+                <div class="booking-main">
+                    <div class="booking-head">
+                        <span class="eyebrow">Step 2 of 2</span>
+                        <h2 id="bookingTitle">Complete Your Booking</h2>
+                    </div>
+
+                    <div class="selected-car" id="selectedCar"></div>
+
+                    <form id="bookingForm" novalidate>
+                        <div class="form-alert" id="formAlert" role="alert" hidden>
+                            <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                            <span>Please complete all required fields.</span>
+                        </div>
+
+                        <fieldset class="form-section">
+                            <legend><i class="fa-solid fa-route" aria-hidden="true"></i> Rental Details</legend>
+                            <div class="form-grid">
+                                <div class="field field-full">
+                                    <label for="bkLocation">Pick-up Location <span class="req" aria-hidden="true">*</span></label>
+                                    <select id="bkLocation" name="location" required>
+                                        <option value="Lahore">Lahore</option>
+                                        <option value="Islamabad">Islamabad</option>
+                                        <option value="Karachi">Karachi</option>
+                                        <option value="Rawalpindi">Rawalpindi</option>
+                                        <option value="Peshawar">Peshawar</option>
+                                        <option value="Multan">Multan</option>
+                                        <option value="Faisalabad">Faisalabad</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="bkPickup">Pick-up Date <span class="req" aria-hidden="true">*</span></label>
+                                    <input type="date" id="bkPickup" name="pickup" required aria-describedby="bkPickup-err">
+                                    <p class="field-error" id="bkPickup-err"></p>
+                                </div>
+                                <div class="field">
+                                    <label for="bkReturn">Return Date <span class="req" aria-hidden="true">*</span></label>
+                                    <input type="date" id="bkReturn" name="return" required aria-describedby="bkReturn-err">
+                                    <p class="field-error" id="bkReturn-err"></p>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="form-section">
+                            <legend><i class="fa-regular fa-user" aria-hidden="true"></i> Personal Information</legend>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="bkName">Full Name <span class="req" aria-hidden="true">*</span></label>
+                                    <input type="text" id="bkName" name="name" autocomplete="name" placeholder="e.g. Ahmed Khan" required aria-describedby="bkName-err">
+                                    <p class="field-error" id="bkName-err"></p>
+                                </div>
+                                <div class="field">
+                                    <label for="bkEmail">Email <span class="req" aria-hidden="true">*</span></label>
+                                    <input type="email" id="bkEmail" name="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="bkEmail-err">
+                                    <p class="field-error" id="bkEmail-err"></p>
+                                </div>
+                                <div class="field">
+                                    <label for="bkPhone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+                                    <input type="tel" id="bkPhone" name="phone" autocomplete="tel" placeholder="0300 1234567" required aria-describedby="bkPhone-err">
+                                    <p class="field-error" id="bkPhone-err"></p>
+                                </div>
+                                <div class="field">
+                                    <label for="bkCnic">CNIC Number <span class="req" aria-hidden="true">*</span></label>
+                                    <input type="text" id="bkCnic" name="cnic" inputmode="numeric" maxlength="15" placeholder="35202-1234567-1" required aria-describedby="bkCnic-err">
+                                    <p class="field-error" id="bkCnic-err"></p>
+                                </div>
+                                <div class="field field-full">
+                                    <label for="bkRequest">Special Request <span class="optional">(optional)</span></label>
+                                    <textarea id="bkRequest" name="request" rows="3" maxlength="300" placeholder="Child seat, airport delivery, flight number…"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <p class="form-note"><span class="req" aria-hidden="true">*</span> Required fields</p>
+                    </form>
+                </div>
+
+                <aside class="booking-summary" aria-label="Booking summary">
+                    <div class="summary-card">
+                        <p class="summary-label">Your Booking</p>
+                        <h3 id="sumCarName">—</h3>
+                        <dl class="summary-lines">
+                            <div><dt id="sumRateLabel">PKR 0 × 1 day</dt><dd id="sumSubtotal">PKR 0</dd></div>
+                            <div><dt>Service Fee</dt><dd id="sumService">PKR 0</dd></div>
+                            <div><dt>Security Deposit <small>(refundable)</small></dt><dd id="sumDeposit">PKR 0</dd></div>
+                        </dl>
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <strong id="sumTotal">PKR 0</strong>
+                        </div>
+                        <p class="summary-dates" id="sumDates"></p>
+                        <button type="submit" form="bookingForm" class="btn btn-accent btn-block btn-lg" id="confirmBtn">
+                            <i class="fa-solid fa-lock" aria-hidden="true"></i> Confirm Booking
+                        </button>
+                        <p class="summary-secure"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Free cancellation up to 24h before pick-up</p>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="confirm-view" id="confirmView" hidden></div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL: MY BOOKING ============ -->
+    <div class="modal" id="myBookingModal" role="dialog" aria-modal="true" aria-labelledby="myBookingTitle" hidden>
+        <div class="modal-dialog modal-md">
+            <button type="button" class="modal-close" data-close aria-label="Close my booking"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <h2 class="modal-title" id="myBookingTitle">My Booking</h2>
+            <div id="myBookingContent"></div>
+        </div>
+    </div>
+
+    <!-- ============ MODAL: SIGN IN ============ -->
+    <div class="modal" id="signInModal" role="dialog" aria-modal="true" aria-labelledby="signInTitle" hidden>
+        <div class="modal-dialog modal-sm">
+            <button type="button" class="modal-close" data-close aria-label="Close sign in"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <h2 class="modal-title" id="signInTitle">Welcome back</h2>
+            <p class="modal-sub">Sign in to manage your bookings faster.</p>
+            <form id="signInForm" novalidate>
+                <div class="field">
+                    <label for="siEmail">Email <span class="req" aria-hidden="true">*</span></label>
+                    <input type="email" id="siEmail" autocomplete="email" placeholder="you@example.com" required aria-describedby="siEmail-err">
+                    <p class="field-error" id="siEmail-err"></p>
+                </div>
+                <div class="field">
+                    <label for="siPassword">Password <span class="req" aria-hidden="true">*</span></label>
+                    <input type="password" id="siPassword" autocomplete="current-password" placeholder="At least 6 characters" required aria-describedby="siPassword-err">
+                    <p class="field-error" id="siPassword-err"></p>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
+                <p class="form-note center">Demo only — any valid email and a 6+ character password will work.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============ MODAL: INFO ============ -->
+    <div class="modal" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoTitle" hidden>
+        <div class="modal-dialog modal-md">
+            <button type="button" class="modal-close" data-close aria-label="Close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            <h2 class="modal-title" id="infoTitle"></h2>
+            <div class="info-body" id="infoBody"></div>
+        </div>
+    </div>
+
+    <!-- Toasts, back-to-top, print area -->
+    <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="false"></div>
+
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <div id="printArea" aria-hidden="true"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
